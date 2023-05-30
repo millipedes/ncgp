@@ -60,7 +60,8 @@ void write_canvas(canvas the_canvas, char * file_name) {
 
 void write_canvas_png(canvas the_canvas, char * file_name) {
   FILE * fp = fopen(file_name, "w");
-  png_structp png_ptr = png_create_write_struct(PNG_LIBPNG_VER_STRING, NULL, NULL, NULL);
+  png_structp png_ptr = png_create_write_struct(PNG_LIBPNG_VER_STRING, NULL,
+      NULL, NULL);
   png_infop info_ptr = png_create_info_struct(png_ptr);
   png_init_io(png_ptr, fp);
   png_set_IHDR(png_ptr, info_ptr, the_canvas->width, the_canvas->height, 8,

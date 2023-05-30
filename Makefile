@@ -3,7 +3,7 @@ CFILES=$(wildcard src/*/*.c)
 HFILES=$(wildcard src/*/include/*.h)
 OBJFILES=$(CFILES:.c=.o)
 OBJPATH=src/objects/
-EXEFILE=bin/main
+EXEFILE=bin/ncgp
 
 all:$(OBJFILES)
 	$(CC) $(OBJFILES) -o $(EXEFILE) -lm -lpng
