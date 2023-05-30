@@ -6,7 +6,7 @@ OBJPATH=src/objects/
 EXEFILE=bin/ncgp
 
 all:$(OBJFILES)
-	$(CC) $(OBJFILES) -o $(EXEFILE) -lm -lpng
+	$(CC) $(OBJFILES) -o $(EXEFILE) -lm -lpng -lfreetype
 
 %.o: %.c $(HFILES)%.h
 	$(CC) -c $(CFILES) $< -o $@ -lm
